@@ -3,30 +3,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        int a = 5;
-
         Student student1 = new Student();
+        
+        // Setting attributes data using setters
+        student1.setFirstName("Kelvin");
+        student1.setLastName("Cheruiyot");
 
-        // setting atrributes data
-        student1.firstName = "Kelvin";
-        student1.lastName = "Cheruiyot";
-        student1.rollNo = 1;
-        student1.section = "A";
-
+        // getting attributes data using getters
+        String firstName = student1.getFirstName();
         String fullName = student1.fullName();
 
-        String firstName = student1.firstName;
+        System.out.println("First name "+firstName);
+        System.out.println("Full name "+fullName);
 
-        //Accessng attributes data
-        System.out.println("first name "+ firstName);
-
-        //Modifying attributes data
-
-        String modifiedName = student1.firstName = "Ronoh";
-
-        System.out.println("first name "+ modifiedName);
-        // System.out.println(fullName);
 
   }
 

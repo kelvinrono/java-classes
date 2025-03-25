@@ -1,29 +1,35 @@
 // create a Student class
 public class Student {
    // Declaring attributes
-   String firstName;
-   String lastName;
-   int rollNo;
-   String email;
-   String section;
-
+   private String firstName;
+   private String lastName;
    // initialize attributes
-   Student(String firstName, String lastName, int rollNo, String section){
+   Student(String firstName, String lastName){
       this.firstName= firstName;
-      this.rollNo = rollNo;
-      this.section = section;
       this.lastName = lastName;
    }
 
    //empty constructor
    Student(){
    }
-   
-   // print details	  
-   public void printDetails() {
-      System.out.println("Student Details:");
-      System.out.println(this.firstName+ ", "+", " + this.rollNo + ", " + this.section);
+
+   // Getters
+   public String getFirstName(){
+      return this.firstName;
    }
+
+   public void setFirstName(String firstName){
+      this.firstName = firstName;
+   }
+
+   public String getLastName(){
+      return this.lastName;
+   }
+   
+   public void setLastName(String lastName){
+      this.lastName = lastName;
+   }
+
    public String fullName() {
       return this.firstName + " " + this.lastName;
    }
