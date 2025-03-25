@@ -3,12 +3,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Student student1 = new Student("Kelvin", 7658, "rono@gmail.com");
-        Student student2 = new Student("Amani", 4734, "Amani@gmail.com");
-        Student student3 = new Student("Amani", 4734, "Amani@gmail.com");
-        Student student4 = new Student("Amani", 4734, "Amani@gmail.com");
-        Student student5 = new Student("Amani", 4734, "Amani@gmail.com");
-        Student student6 = new Student("Amani", 4734, "Amani@gmail.com");
+        Student student1 = new Student();
+
+        student1.firstName = "Kelvin";
+        student1.lastName = "Cheruiyot";
+        student1.rollNo = 1;
+        student1.section = "A";
+
+        String fullName = student1.fullName();
+
+        System.out.println(fullName);
 
   }
 
