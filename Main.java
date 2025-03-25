@@ -3,6 +3,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+        int a = 5;
+
         Student student1 = new Student();
 
         // setting atrributes data
@@ -18,6 +21,11 @@ public class Main {
         //Accessng attributes data
         System.out.println("first name "+ firstName);
 
+        //Modifying attributes data
+
+        String modifiedName = student1.firstName = "Ronoh";
+
+        System.out.println("first name "+ modifiedName);
         // System.out.println(fullName);
 
   }
