@@ -3,19 +3,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Student student1 = new Student();
-        
-        // Setting attributes data using setters
-        student1.setFirstName("Kelvin");
-        student1.setLastName("Cheruiyot");
+      Bank kelvinAccount = new Bank("Kelvin Cheruiyot", 123456, 1000.0); // creating an object of Bank class
 
-        // getting attributes data using getters
-        String firstName = student1.getFirstName();
-        String fullName = student1.fullName();
+      int accountNumber = kelvinAccount.getAccountNumber(); // getting account number using getter method and storing it in new varibale
 
-        System.out.println("First name "+firstName);
-        System.out.println("Full name "+fullName);
+      System.out.println("Account Balance " + kelvinAccount.getBalance()); // getting balance using getter method
 
+      kelvinAccount.withdraw(10000.0); // Attempting to withdraw more than balance
+
+      kelvinAccount.withdraw(-10.0); // Attempting to withdraw negative amount
 
   }
 
