@@ -1,19 +1,70 @@
+import java.util.Scanner;
 
-public class Main {
-
+public class Main{
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-      Bank kelvinAccount = new Bank("Kelvin Cheruiyot", 123456, 1000.0); // creating an object of Bank class
+        Library library = new Library();
 
-      int accountNumber = kelvinAccount.getAccountNumber(); // getting account number using getter method and storing it in new varibale
+        int choice = 0;
 
-      System.out.println("Account Balance " + kelvinAccount.getBalance()); // getting balance using getter method
+        do{
+            //Menu Options
+            System.out.println("Library Menu");
+            System.out.println("Enter 1 to add a books");
+            System.out.println("Enter 2 to Display all available books");
+            System.out.println("Enter 3 to Borrow a book");
+            System.out.println("Enter 4 to return a book");
+            System.out.println("Enter 5 to exit");
 
-      kelvinAccount.withdraw(10000.0); // Attempting to withdraw more than balance
+            System.out.println("Choose an option");
+            choice = scanner.nextInt();
 
-      kelvinAccount.withdraw(-10.0); // Attempting to withdraw negative amount
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter the title");
+                    String title = scanner.nextLine();
 
-  }
+                    System.out.println("Enter the title");
+                    String author = scanner.nextLine();
+
+                    System.out.println("Enter the isbn");
+                    String isbn = scanner.nextLine();
+
+                    library.addBook(title, author, isbn);
+
+                    break;
+
+                    case 2:
+                    library.displayBooks();
+                
+                    break;
+
+                    case 3:
+                    System.out.println("Enter ISBN of the book");
+                    String borrowedBookIsbn = scanner.nextLine();
+                    library.borrowBook(borrowedBookIsbn);
+                    break;
+
+                    case 4:
+                    System.out.println("Enter ISBN of a book to return");
+                    String bookReturnedIsbn = scanner.nextLine();
+                    library.returnBook(bookReturnedIsbn);
+                    break;
+
+                    case 5: 
+                    System.out.println("Exiting the program");
+            
+                default:
+                System.out.println("You have entered an invalid option. Please try again!");
+                    
+            }
+
+        }
+        while(choice!=5);
+
+        scanner.close();
+
+    }
 
 }
-
