@@ -22,8 +22,8 @@ public class Library{
         
         for(Book book: books){
             System.out.println("book title: "+book.getTitle()
-             + " book author"+ book.getAuthor() + 
-             " book isbn " + book.getIsbn() +" is book borrowed"+ book.getIsBorrowed());
+             + " book author: "+ book.getAuthor() + 
+             " book isbn: " + book.getIsbn() +" is book borrowed: "+ book.getIsBorrowed());
         }
 
     }

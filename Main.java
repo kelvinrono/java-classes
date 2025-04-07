@@ -19,13 +19,14 @@ public class Main{
 
             System.out.println("Choose an option");
             choice = scanner.nextInt();
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
                     System.out.println("Enter the title");
                     String title = scanner.nextLine();
 
-                    System.out.println("Enter the title");
+                    System.out.println("Enter the author");
                     String author = scanner.nextLine();
 
                     System.out.println("Enter the isbn");
