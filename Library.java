@@ -8,7 +8,9 @@ public class Library{
 
     // A method to add a book
     public void addBook(String title, String author, String isbn){
-        books.add(new Book(title, author,isbn));
+        Book book = new Book(title, author,isbn);
+        books.add(book);
+        
     }
 
     //Display all the books
@@ -18,8 +20,8 @@ public class Library{
             System.out.println("No books available");
             return;
         }
-        System.out.println("Available books");
-        
+
+        System.out.println(" \n Available books");  
         for(Book book: books){
             System.out.println("book title: "+book.getTitle()
              + " book author: "+ book.getAuthor() + 
@@ -28,7 +30,7 @@ public class Library{
 
     }
 
-    // Borrow a books
+   // Borrow a books
     public void borrowBook(String isbn){
         for(Book book: books){
             if(book.getIsbn().equals(isbn) && !book.getIsBorrowed()){
@@ -45,7 +47,7 @@ public class Library{
     public void returnBook(String isbn){
         for(Book book: books){
             if(book.getIsbn().equals(isbn) && book.getIsBorrowed()){
-                book.setIsBorrowed(true);
+                book.setIsBorrowed(false);
                 System.out.println("You have returned" + book.getTitle());
                 return;
             }
