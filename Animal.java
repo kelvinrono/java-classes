@@ -1,10 +1,5 @@
-public class Animal{
+public interface Animal {
 
-    public void eat(){
-        System.out.println("An animal can eat food");
-    }
-    public void sleep(){
-        System.out.println("An animal can sleep");
-    }
-
+    void eat();
+    void sleep();
 }
