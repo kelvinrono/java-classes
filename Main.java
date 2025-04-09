@@ -8,10 +8,13 @@ public class Main{
         dog.eat();
         dog.sleep();
         dog.sound();
+        System.out.println("\n");
 
         lion.eat();
         lion.sleep();
         lion.sound();
+        System.out.println("\n");
+
     }
 
 }
