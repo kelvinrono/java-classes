@@ -1,12 +1,13 @@
-import java.util.Scanner;
-
 public class Main{
-    public static void main(String[] args) {
-        Dog dog = new Dog();
+    public static void main(String[] args){
+        double doubleNum = 9.99;
 
-        dog.eat();
-        dog.sleep();
+        int newInt = (int) doubleNum;
+        System.out.println("Our number "+ newInt);
+
+        //Casting to a string
+        String myString = String.valueOf(doubleNum);
+        System.out.println("Our number "+ myString);
 
     }
-
 }
