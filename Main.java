@@ -1,61 +1,43 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args){
-        try {
-            // creating a file
+        // absolute value
+       System.out.println("Absolute value is: "+Math.abs(8));
+       
+       //Larger between the two
+      System.out.println("Larger between 12 and 19 is: "+Math.max(12, 19));
 
-            File myfile = new File("example.txt");
+      //Smaller between the two
+      System.out.println("Smaller between 12 and 19 is: "+Math.min(12, 19));
 
-            if(myfile.createNewFile()){
-                System.out.println("File created successfully");
-            }else{
-                System.out.println("File already exist");
-            }
+      // Raising to a power
+      System.out.println(" 10 raised to power 2 "+Math.pow(10, 2));
 
-            // Write to a file
+      //Square root
+      System.out.println("Square root of 64: "+Math.sqrt(64));
 
-            // FileWriter fileWriter = new FileWriter("example.txt");
-            // fileWriter.write("Java is an awesome language but sometimes complicated");
-            // fileWriter.close();
+    //Cube root
+    System.out.println("Square root of 64: "+Math.cbrt(64));
 
-            // Reading a file
+    //Rounding of to the nearest number
+    System.out.println("Rounding of 4.6: "+Math.round(4.6));
 
-            // File file = new File("example.txt");
-            // Scanner myReader = new Scanner(file);
+    // Getting the ceiling of a number (Nearest whole upper number)
+    System.out.println("Ceiling of 6.3: "+Math.ceil(6.3));
 
-            // while (myReader.hasNextLine()) {
-            //     String data = myReader.nextLine();
-            //     System.out.println(data);
-            // }
-            // myReader.close();
+    //Getting the floor of a number (Nearest whole lower number)
+    System.out.println("Floor of 6.9: "+Math.floor(6.9));
 
-            // File file = new File("example.txt");
-            // if(file.delete()){
-            //     System.out.println("File has been deleted successfully");
-            // }else{
-            //     System.out.println("File failed to delete");
-            // }
+    // Random values betwee 0.0 and 1
+    System.out.println("Random value between 0.0 and 1: "+ Math.random());
 
-            // File Information
-            // if (myfile.exists()) {
-            //     System.out.println("File name: " + myfile.getName());
-            //     System.out.println("Absolute path: " + myfile.getAbsolutePath());
-            //     System.out.println("Writeable: " + myfile.canWrite());
-            //     System.out.println("Readable " + myfile.canRead());
-            //     System.out.println("File size in bytes " + myfile.length());
-                
-            //   } else {
-            //     System.out.println("The file does not exist.");
-            //   }
-          
+    //Natural Log
+    System.out.println("Natural log of 10 "+ Math.log(10));
 
-        } catch (Exception e) {
-           System.out.println("An error occurred");
-           e.printStackTrace();
-        }
+    // Exponential of 10
+    System.out.println("Exponential of 10 "+ Math.exp(10));
+
+
+
     }
 }
